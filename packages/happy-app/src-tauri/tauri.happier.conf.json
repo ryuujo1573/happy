@@ -1,0 +1,27 @@
+{
+  "$schema": "../../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Happier",
+  "identifier": "com.slopus.happier.dev",
+  "app": {
+    "windows": [
+      {
+        "title": "Happier",
+        "width": 1680,
+        "height": 1050,
+        "minWidth": 720,
+        "minHeight": 480,
+        "resizable": true,
+        "fullscreen": false,
+        "titleBarStyle": "Overlay",
+        "trafficLightPosition": {
+          "x": 22,
+          "y": 22
+        },
+        "hiddenTitle": true
+      }
+    ]
+  },
+  "build": {
+    "beforeBuildCommand": "pnpm exec expo export --platform web --output-dir dist"
+  }
+}
